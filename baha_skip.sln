@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baha_skip", "baha_skip.csproj", "{977EE224-1740-4754-9538-B8175438505B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{977EE224-1740-4754-9538-B8175438505B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977EE224-1740-4754-9538-B8175438505B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977EE224-1740-4754-9538-B8175438505B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977EE224-1740-4754-9538-B8175438505B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D65FAD3A-8621-4A56-B5AF-54E809BABBAF}
+	EndGlobalSection
+EndGlobal
