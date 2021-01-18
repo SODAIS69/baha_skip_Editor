@@ -53,6 +53,7 @@ namespace baha_skip
         }
         void refreshListView()
         {
+            json_lv.ItemsSource = null;
             json_lv.ItemsSource = timetable;
         }
         public class TimeTableArray
@@ -66,6 +67,11 @@ namespace baha_skip
 
         private void json_lv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+            if (json_lv.SelectedIndex == -1)
+            {
+                return;
+            }
             TimeTableArray snInfo = (TimeTableArray)json_lv.SelectedItem;
 
             opStart_tb.Text = TimeDecoder( snInfo.OP_Start);
@@ -118,7 +124,7 @@ namespace baha_skip
                     throw new Exception("日期格式有誤");
                     break;
                 case 1:
-                    s = Convert.ToInt32(temp[1]);
+                    //s = Convert.ToInt32(temp[0]);
                     if (s>60)
                     {
                         
@@ -155,7 +161,7 @@ namespace baha_skip
 
                     }
 
-                    return $"{(m).ToString()} {(s).ToString()}";
+                    return $"{(h).ToString()} {(m).ToString()} {(s).ToString()}";
 
 
 
@@ -184,7 +190,28 @@ namespace baha_skip
         }
         private void save()
         {
+            string raw=JsonConvert.SerializeObject(timetable);
+            string _path = "TimeTable/timetable.json";
+            using (StreamWriter streamWriter =new StreamWriter(_path))
+            {
+                streamWriter.Write(raw);
+            }
+            clearControls();
+            load();
+        }
 
+        private void clearControls()
+        {
+
+            opStart_tb.Text = "";
+            opEnd_tb.Text = "";
+
+
+            edStart_tb.Text = "";
+            edEnd_tb.Text = "";
+
+
+            sn_tb.Text = "";
         }
     }
 }

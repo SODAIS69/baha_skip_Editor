@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:baha_skip"
         mc:Ignorable="d"
         Title="baha_skip Editor" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF00B4D8">
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -14,7 +14,7 @@
             <ColumnDefinition Width="133*"/>
             <ColumnDefinition Width="263*"/>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="json_lv" Margin="10,10,23,10" SelectionChanged="json_lv_SelectionChanged">
+        <ListView x:Name="json_lv" Margin="10,10,23,10" SelectionChanged="json_lv_SelectionChanged" Background="#FFFD8200" BorderBrush="White" Foreground="#FF151821">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="☢SN" Width="200" DisplayMemberBinding="{Binding sn}" />
@@ -22,20 +22,21 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Sn" Grid.Column="1" Margin="36,42,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31"/>
+        <Label Content="Sn" Grid.Column="1" Margin="36,42,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Foreground="White"/>
         <TextBox x:Name="sn_tb" Grid.Column="1" Margin="78,46,0,0" TextWrapping="Wrap" FontSize="18" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235" TabIndex="0"/>
-        <Label Content="OP Start" Grid.Column="1" Margin="36,88,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83"/>
+        <Label Content="OP Start" Grid.Column="1" Margin="36,88,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83" Foreground="White"/>
         <TextBox x:Name="opStart_tb" Grid.Column="1" Margin="124,92,0,0" TextWrapping="Wrap" FontSize="18" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235" TabIndex="1"/>
-        <Label Content="OP End" Grid.Column="1" Margin="36,125,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83"/>
+        <Label Content="OP End" Grid.Column="1" Margin="36,125,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83" Foreground="White"/>
         <TextBox x:Name="opEnd_tb" Grid.Column="1" Margin="124,129,0,0" TextWrapping="Wrap" FontSize="18" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235" TabIndex="2"/>
-        <Label Content="ED Start" Grid.Column="1" Margin="36,177,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83"/>
+        <Label Content="ED Start" Grid.Column="1" Margin="36,177,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83" Foreground="White"/>
         <TextBox x:Name="edStart_tb" Grid.Column="1" Margin="124,181,0,0" TextWrapping="Wrap" FontSize="18" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235" TabIndex="3"/>
-        <Label Content="ED End" Grid.Column="1" Margin="36,214,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83"/>
+        <Label Content="ED End" Grid.Column="1" Margin="36,214,0,0" FontSize="18" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="83" Foreground="White"/>
         <TextBox x:Name="edEnd_tb" Grid.Column="1" Margin="124,218,0,0" TextWrapping="Wrap" FontSize="18" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235" TabIndex="4"/>
-        <Button Content="❌" Grid.Column="1" Margin="0,0,250,10" FontSize="48" Foreground="#FFFF2828" BorderBrush="#FFB4AEB3" Background="#FFF3EFEF" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" TabIndex="7"/>
-        <Button x:Name="apply_btn" Content="✅" Grid.Column="1" Margin="0,0,90,10" FontSize="48" Foreground="#FFFF2828" BorderBrush="#FFB4AEB3" Background="#FFF3EFEF" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" TabIndex="5" Click="apply_Click"/>
-        <Button Content="&lt;" Grid.Column="1" Margin="0,0,170,10" FontSize="48" Foreground="#FFFF2828" BorderBrush="#FFB4AEB3" Background="#FFF3EFEF" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="Button_Click" TabIndex="6"/>
-        <Button Content="&gt;" Grid.Column="1" Margin="0,0,10,10" FontSize="48" Foreground="#FFFF2828" BorderBrush="#FFB4AEB3" Background="#FFF3EFEF" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" TabIndex="5"/>
+        <Button Content="🗑" Grid.Column="1" Margin="0,0,250,10" FontSize="36" Foreground="White" BorderBrush="#FFB4AEB3" Background="#FFFD8200" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" TabIndex="7" VerticalContentAlignment="Center"/>
+        <Button x:Name="apply_btn" IsDefault="True"  Content="✅" Grid.Column="1" Margin="0,0,90,10" FontSize="36" Foreground="White" BorderBrush="#FFC954B5" Background="#FFFD8200" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" TabIndex="5" Click="apply_Click" VerticalContentAlignment="Center"/>
+        <Button Content="&lt;" Grid.Column="1" Margin="0,0,170,10" FontSize="36" Foreground="White" BorderBrush="#FFB4AEB3" Background="#FFFD8200" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="Button_Click" TabIndex="6" VerticalContentAlignment="Center"/>
+        <Button Content="&gt;" Grid.Column="1" Margin="0,0,10,10" FontSize="36" Foreground="White" BorderBrush="#FFB4AEB3" Background="#FFFD8200" Height="68" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" TabIndex="5" VerticalContentAlignment="Center"/>
+        <CheckBox x:Name="newData_chb" Content="🆕新增模式" Grid.Column="1" Margin="0,0,222,79" FontSize="16" Height="19" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="103" Foreground="White"/>
 
     </Grid>
 </Window>
